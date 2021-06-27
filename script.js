@@ -5,36 +5,46 @@ function computerPlay(){
     return choice[compChoice];
 }
 
+let winScore = 2;
+let loseScore = 0;
+let tieScore = 1;
+
+
 //playRound() function takes two parameters 'playerSelection' & 'computerSelection'- and then returns a string that declares the winner of the round.
 function playRound(playerSelection, computerSelection){
     if ((playerSelection ==="rock" && computerSelection ==="paper")){
-        return ("You lose!! Rock loses against paper.");
+        console.log("Player: "+loseScore, "Computer: "+winScore);
+        return ("You lose!! Rock loses against paper.\n " );
     }else if ((playerSelection ==="")){
-        return("You lose!! Next time please type either rock/paper/scissors.");
+        console.log ("Player: "+loseScore, "Computer: "+winScore);
+        return("You lose!! Next time please type either rock/paper/scissors.\n ");
     }else if ((playerSelection ==="rock" && computerSelection ==="scissors")){
-        return("You win!! Rock beats scissors.");
+        console.log ("Player: "+winScore, "Computer: "+loseScore);
+        return("You win!! Rock beats scissors.\n ");
     }else if ((playerSelection ==="paper" && computerSelection ==="rock")){
-        return("You win!! Paper beats rock.");
+        console.log ("Player: "+winScore, "Computer: "+loseScore);
+        return("You win!! Paper beats rock.\n ");
     }else if ((playerSelection ==="paper" && computerSelection ==="scissors")){
-        return ("You lose!! Paper loses against scissors.");
+        console.log ("Player: "+loseScore, "Computer: "+winScore);
+        return ("You lose!! Paper loses against scissors.\n ");
     }else if ((playerSelection ==="scissors" && computerSelection ==="paper")){
-        return ("You win!! Scissor beats paper.");
+        console.log ("Player: "+winScore, "Computer: "+loseScore);
+        return ("You win!! Scissor beats paper.\n ");
     }else if ((playerSelection==="scissors" && computerSelection==="rock")){
-        return ("You lose!! Scissors lose against rock.")
+        console.log ("Player: "+loseScore, "Computer: "+winScore);
+        return ("You lose!! Scissors lose against rock.\n ")
     }else {
-        return ("It's a Tie!");
+        console.log ("Player: "+tieScore, "Computer: "+tieScore);
+        return ("It's a Tie!\n ");
     }   
 }
 
 //playerInput variable collects input- 'rock' / 'paper' / 'scissors' from the player.
 //playSelection variable ensures that the input remains 'case-insensitive' which means players can input 'rock', 'ROCK', 'RoCk' and other variations.
 function game (){
-    let playerInput= prompt("Type 'rock' / 'paper' / 'scissors'.");
+    let playerInput= prompt("Please type either 'rock' / 'paper' / 'scissors'.");
 
     let playerSelection = playerInput.toLowerCase();
-    //if (playerSelection!==['rock', 'paper', 'scissors']){
-        //playerInput=prompt("Please type correct value again [HINT-'rock'/'paper'/'scissors']")
-    //}
     console.log("You selected: "+ playerSelection+ ".");
 
     let computerSelection = computerPlay();
@@ -44,6 +54,7 @@ function game (){
         console.log(playRound(playerSelection,computerSelection));
     }  
 game();
+
 game();
 game();
 game();
