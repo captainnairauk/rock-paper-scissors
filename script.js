@@ -41,11 +41,7 @@ function playRound(playerSelection, computerSelection){
         return ("It's a Tie!");
     }   
 }
-
-function gameScore(){
-    console.log ("You: "+playerScore, "Computer: "+computerScore);
-}
-
+//scoreCounter() keeps score & adds previous round's score (cumulative)
 function scoreCounter(){
     totalPlayerScore=playerScore+totalPlayerScore;
     totalComputerScore=computerScore+totalComputerScore;
@@ -67,12 +63,22 @@ function game (){
         console.log(roundResult);
         scoreCounter();
     }  
+//Rules Popup.
+alert("Rules: \n\n 1. Before beginning this game press f12 to open console.\n 2. There are 5 rounds in this game. \n 3. If you win a round, you gain 2 points. \n 4. If you lose a round, you gain 0 points. \n 5. If there is a tie, you gain 1 points. \n 6. If you don't enter anything, you lose that round. \n 7. In order to win this game, your score in the final round must be\n      more than final round score of computer. \n 8. Press f5 to reset the game.");
 
+//Ensures 5 rounds of game.
 for (let i=0; i<5; i++){
     game();
     console.log("\n");
 }
 
+if (totalPlayerScore>totalComputerScore){
+    console.log ("Congratulations!! You win.");
+} else if (totalPlayerScore<totalComputerScore){
+    console.log ("Computer Wins!! You lose.");
+} else {
+    console.log ("It's a Tie!! Play again.");
+}
 
 
 
