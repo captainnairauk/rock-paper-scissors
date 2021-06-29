@@ -5,38 +5,51 @@ function computerPlay(){
     return choice[compChoice];
 }
 
-let winScore = 2;
-let loseScore = 0;
-let tieScore = 1;
-
+let winPoint = 2;
+let losePoint = 0;
+let tiePoint = 1;
+let playerScore =0;
+let computerScore =0;
+let totalPlayerScore=0;
+let totalComputerScore=0;
 
 //playRound() function takes two parameters 'playerSelection' & 'computerSelection'- and then returns a string that declares the winner of the round.
 function playRound(playerSelection, computerSelection){
     if ((playerSelection ==="rock" && computerSelection ==="paper")){
-        console.log("Player: "+loseScore, "Computer: "+winScore);
-        return ("You lose!! Rock loses against paper.\n " );
+        playerScore=losePoint, computerScore=winPoint;    
+        return ("You lose this round!! Paper wraps rock." );
     }else if ((playerSelection ==="")){
-        console.log ("Player: "+loseScore, "Computer: "+winScore);
-        return("You lose!! Next time please type either rock/paper/scissors.\n ");
+        playerScore=losePoint, computerScore=winPoint;
+        return("You lose this round!! Next time please type rock or paper or scissors.");
     }else if ((playerSelection ==="rock" && computerSelection ==="scissors")){
-        console.log ("Player: "+winScore, "Computer: "+loseScore);
-        return("You win!! Rock beats scissors.\n ");
+        playerScore=winPoint, computerScore=losePoint;
+        return("You've won this round!! Rock crushes scissors.");
     }else if ((playerSelection ==="paper" && computerSelection ==="rock")){
-        console.log ("Player: "+winScore, "Computer: "+loseScore);
-        return("You win!! Paper beats rock.\n ");
+        playerScore=winPoint, computerScore=losePoint;
+        return("You've won this round!! Paper wraps rock.");
     }else if ((playerSelection ==="paper" && computerSelection ==="scissors")){
-        console.log ("Player: "+loseScore, "Computer: "+winScore);
-        return ("You lose!! Paper loses against scissors.\n ");
+        playerScore=losePoint, computerScore=winPoint;
+        return ("You've won the round!! Scissors cuts paper.");
     }else if ((playerSelection ==="scissors" && computerSelection ==="paper")){
-        console.log ("Player: "+winScore, "Computer: "+loseScore);
-        return ("You win!! Scissor beats paper.\n ");
+        playerScore=winPoint, computerScore=losePoint;
+        return ("You've won the round!! Scissors cuts paper.");
     }else if ((playerSelection==="scissors" && computerSelection==="rock")){
-        console.log ("Player: "+loseScore, "Computer: "+winScore);
-        return ("You lose!! Scissors lose against rock.\n ")
+        playerScore=losePoint, computerScore=winPoint;
+        return ("You lose this round!! Rock crushes scissors.")
     }else {
-        console.log ("Player: "+tieScore, "Computer: "+tieScore);
-        return ("It's a Tie!\n ");
+        playerScore=tiePoint, computerScore=tiePoint;
+        return ("It's a Tie!");
     }   
+}
+
+function gameScore(){
+    console.log ("You: "+playerScore, "Computer: "+computerScore);
+}
+
+function scoreCounter(){
+    totalPlayerScore=playerScore+totalPlayerScore;
+    totalComputerScore=computerScore+totalComputerScore;
+    console.log("You: "+totalPlayerScore, "Computer: "+totalComputerScore);
 }
 
 //playerInput variable collects input- 'rock' / 'paper' / 'scissors' from the player.
@@ -45,20 +58,20 @@ function game (){
     let playerInput= prompt("Please type either 'rock' / 'paper' / 'scissors'.");
 
     let playerSelection = playerInput.toLowerCase();
-    console.log("You selected: "+ playerSelection+ ".");
+    console.log("You: "+ playerSelection + "!");
 
     let computerSelection = computerPlay();
-        console.log("Computer selected: "+ computerSelection+ ".");
+        console.log("Computer: "+ computerSelection + "!");
 
-    playRound(playerSelection, computerSelection);
-        console.log(playRound(playerSelection,computerSelection));
+    let roundResult=playRound(playerSelection, computerSelection);
+        console.log(roundResult);
+        scoreCounter();
     }  
-game();
 
-game();
-game();
-game();
-game();
+for (let i=0; i<5; i++){
+    game();
+    console.log("\n");
+}
 
 
 
