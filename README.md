@@ -1,5 +1,6 @@
 Rock paper scissors game where you play against the computer.
 
+
 What I learned
 
 -Deepened knowledge of how functions work with each other.
@@ -12,4 +13,5 @@ What I learned
 
 -Hit a lot of walls, but was able to punch through them using the 'take a    break' technique. Whenever you feel overwhelmed by a problem, take a break and come back later.
 
+Live Demo:  https://captainnairauk.github.io/rock-paper-scissors/
 
