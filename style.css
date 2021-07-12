@@ -1,0 +1,26 @@
+#container{
+}
+
+#rock{
+    background-color: red;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    min-width: 60px;
+}
+
+#paper{
+    background-color: blue;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    min-width: 60px;
+}
+
+#scissors{
+    background-color: green;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    min-width: 60px;
+}
