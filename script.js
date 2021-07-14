@@ -12,99 +12,200 @@ let playerScore = 0;
 let computerScore = 0;
 let totalPlayerScore = 0;
 let totalComputerScore = 0;
+let x = 0;
 
 const container = document.querySelector("#container");
-
 
 const array = Array.from(container.querySelectorAll("button"));
 container.appendChild(array[0]);
 container.appendChild(array[1]);
 container.appendChild(array[2]);
 
-
-array[0].addEventListener("click", () => {
+function game(){
+function rockBtn() {
     let computerSelection = computerPlay();
     switch (true) {
         case (computerSelection === "rock"):
             playerScore = tiePoint, computerScore = tiePoint;
             totalPlayerScore = playerScore + totalPlayerScore;
             totalComputerScore = computerScore + totalComputerScore;
-            alert("You: " + "rock!" + "\n" + "Computer: " + computerSelection + "!" + "\n" + "It's a Tie!" + "\n" + "You: " + totalPlayerScore + " Computer: " + totalComputerScore);
+            x = totalPlayerScore + totalComputerScore;
+            if (x >= 10) {
+                array[0].disabled = true;
+                array[1].disabled = true;
+                array[2].disabled = true;
+            } else {
+                array[0].disabled = false;
+                array[1].disabled = false;
+                array[2].disabled = false;
+            }
+            alert("You: " + "rock!" + "\n" + "Computer: " + computerSelection + "!" + "\n" + "It's a Tie!" + "\n" + "You: " + totalPlayerScore + " Computer: " + totalComputerScore + " r: " + x);
             break;
         case (computerSelection === "paper"):
             playerScore = losePoint, computerScore = winPoint;
             totalPlayerScore = playerScore + totalPlayerScore;
             totalComputerScore = computerScore + totalComputerScore;
-            alert("You: " + "rock!" + "\n" + "Computer: " + computerSelection + "!" + "\n" + "You lose! Paper wraps Rock!" + "\n" + "You: " + totalPlayerScore + " Computer: " + totalComputerScore);
+            x = totalPlayerScore + totalComputerScore;
+            if (x >= 10) {
+                array[0].disabled = true;
+                array[1].disabled = true;
+                array[2].disabled = true;
+            } else {
+                array[0].disabled = false;
+                array[1].disabled = false;
+                array[2].disabled = false;
+            }
+            alert("You: " + "rock!" + "\n" + "Computer: " + computerSelection + "!" + "\n" + "You lose! Paper wraps Rock!" + "\n" + "You: " + totalPlayerScore + " Computer: " + totalComputerScore + " r: " + x);
             break;
         default:
             playerScore = winPoint, computerScore = losePoint;
             totalPlayerScore = playerScore + totalPlayerScore;
             totalComputerScore = computerScore + totalComputerScore;
-            alert("You: " + "rock!" + "\n" + "Computer: " + computerSelection + "!" + "\n" + "You win! Rock crushes Scissors!" + "\n" + "You: " + totalPlayerScore + " Computer: " + totalComputerScore);
+            x = totalPlayerScore + totalComputerScore;
+            if (x >= 10) {
+                array[0].disabled = true;
+                array[1].disabled = true;
+                array[2].disabled = true;
+            } else {
+                array[0].disabled = false;
+                array[1].disabled = false;
+                array[2].disabled = false;
+            }
+            alert("You: " + "rock!" + "\n" + "Computer: " + computerSelection + "!" + "\n" + "You win! Rock crushes Scissors!" + "\n" + "You: " + totalPlayerScore + " Computer: " + totalComputerScore + " r: " + x);
             break;
     }
-});
 
-array[1].addEventListener("click", () => {
+}
+array[0].addEventListener("click", rockBtn);
+
+function paperBtn() {
     let computerSelection = computerPlay();
     switch (true) {
         case (computerSelection === "paper"):
             playerScore = tiePoint, computerScore = tiePoint;
             totalPlayerScore = playerScore + totalPlayerScore;
             totalComputerScore = computerScore + totalComputerScore;
-            alert("You: " + "paper!" + "\n" + "Computer: " + computerSelection + "!" + "\n" + "It's a Tie!" + "\n" + "You: " + totalPlayerScore + " Computer: " + totalComputerScore);
+            x = totalPlayerScore + totalComputerScore;
+            if (x >= 10) {
+                array[0].disabled = true;
+                array[1].disabled = true;
+                array[2].disabled = true;
+            } else {
+                array[0].disabled = false;
+                array[1].disabled = false;
+                array[2].disabled = false;
+            }
+            alert("You: " + "paper!" + "\n" + "Computer: " + computerSelection + "!" + "\n" + "It's a Tie!" + "\n" + "You: " + totalPlayerScore + " Computer: " + totalComputerScore + " r: " + x);
             break;
         case (computerSelection === "rock"):
             playerScore = winPoint, computerScore = losePoint;
             totalPlayerScore = playerScore + totalPlayerScore;
             totalComputerScore = computerScore + totalComputerScore;
-            alert("You: " + "paper!" + "\n" + "Computer: " + computerSelection + "!" + "\n" + "You win! Paper wraps Rock!" + "\n" + "You: " + totalPlayerScore + " Computer: " + totalComputerScore);
+            x = totalPlayerScore + totalComputerScore;
+            if (x >= 10) {
+                array[0].disabled = true;
+                array[1].disabled = true;
+                array[2].disabled = true;
+            } else {
+                array[0].disabled = false;
+                array[1].disabled = false;
+                array[2].disabled = false;
+            }
+            alert("You: " + "paper!" + "\n" + "Computer: " + computerSelection + "!" + "\n" + "You win! Paper wraps Rock!" + "\n" + "You: " + totalPlayerScore + " Computer: " + totalComputerScore + " r: " + x);
             break;
         default:
             playerScore = losePoint, computerScore = winPoint;
             totalPlayerScore = playerScore + totalPlayerScore;
             totalComputerScore = computerScore + totalComputerScore;
-            alert("You: " + "paper!" + "\n" + "Computer: " + computerSelection + "!" + "\n" + "You lose! Scissors cuts Paper!" + "\n" + "You: " + totalPlayerScore + " Computer: " + totalComputerScore)
+            x = totalPlayerScore + totalComputerScore;
+            if (x >= 10) {
+                array[0].disabled = true;
+                array[1].disabled = true;
+                array[2].disabled = true;
+            } else {
+                array[0].disabled = false;
+                array[1].disabled = false;
+                array[2].disabled = false;
+            }
+            alert("You: " + "paper!" + "\n" + "Computer: " + computerSelection + "!" + "\n" + "You lose! Scissors cuts Paper!" + "\n" + "You: " + totalPlayerScore + " Computer: " + totalComputerScore + " r: " + x);
             break;
     }
-});
+}
+array[1].addEventListener("click", paperBtn);
 
-
-array[2].addEventListener("click", () => {
+function scissorBtn() {
     let computerSelection = computerPlay();
     switch (true) {
         case (computerSelection === "scissors"):
             playerScore = tiePoint, computerScore = tiePoint;
             totalPlayerScore = playerScore + totalPlayerScore;
             totalComputerScore = computerScore + totalComputerScore;
-            alert("You: " + "scissors!" + "\n" + "Computer: " + computerSelection + "!" + "\n" + "It's a Tie!" + "\n" + "You: " + totalPlayerScore + " Computer: " + totalComputerScore);
+            x = totalPlayerScore + totalComputerScore;
+            if (x >= 10) {
+                array[0].disabled = true;
+                array[1].disabled = true;
+                array[2].disabled = true;
+            } else {
+                array[0].disabled = false;
+                array[1].disabled = false;
+                array[2].disabled = false;
+            }
+            alert("You: " + "scissors!" + "\n" + "Computer: " + computerSelection + "!" + "\n" + "It's a Tie!" + "\n" + "You: " + totalPlayerScore + " Computer: " + totalComputerScore + " r: " + x);
             break;
         case (computerSelection === "paper"):
             playerScore = winPoint, computerScore = losePoint;
             totalPlayerScore = playerScore + totalPlayerScore;
             totalComputerScore = computerScore + totalComputerScore;
-            alert("You: " + "scissors!" + "\n" + "Computer: " + computerSelection + "!" + "\n" + "You win! Scissors cuts Paper!" + "\n" + "You: " + totalPlayerScore + " Computer: " + totalComputerScore);
+            x = totalPlayerScore + totalComputerScore;
+            if (x >= 10) {
+                array[0].disabled = true;
+                array[1].disabled = true;
+                array[2].disabled = true;
+            } else {
+                array[0].disabled = false;
+                array[1].disabled = false;
+                array[2].disabled = false;
+            }
+            alert("You: " + "scissors!" + "\n" + "Computer: " + computerSelection + "!" + "\n" + "You win! Scissors cuts Paper!" + "\n" + "You: " + totalPlayerScore + " Computer: " + totalComputerScore + " r: " + x);
             break;
         default:
             playerScore = losePoint, computerScore = winPoint;
             totalPlayerScore = playerScore + totalPlayerScore;
             totalComputerScore = computerScore + totalComputerScore;
-            alert("You: " + "scissors!" + "\n" + "Computer: " + computerSelection + "!" + "\n" + "You lose! Rock crushes Scissors!" + "\n" + "You: " + totalPlayerScore + " Computer: " + totalComputerScore);
+            x = totalPlayerScore + totalComputerScore;
+            if (x >= 10) {
+                array[0].disabled = true;
+                array[1].disabled = true;
+                array[2].disabled = true;
+            } else {
+                array[0].disabled = false;
+                array[1].disabled = false;
+                array[2].disabled = false;
+            }
+            alert("You: " + "scissors!" + "\n" + "Computer: " + computerSelection + "!" + "\n" + "You lose! Rock crushes Scissors!" + "\n" + "You: " + totalPlayerScore + " Computer: " + totalComputerScore + " r: " + x);
             break;
     }
-});
+}
+array[2].addEventListener("click", scissorBtn);
+}
+
+function winner(){
+game();
+if (totalPlayerScore > totalComputerScore) {
+    alert("Congratulations!! You win.");
+} else if (totalPlayerScore < totalComputerScore) {
+    alert("Computer Wins!! You lose.");
+} else {
+    alert("It's a Tie!! Play again.");
+}
+}
+
+winner();
 
 
-// if (totalComputerScore+totalPlayerScore=10){
-//     return(if (totalPlayerScore > totalComputerScore) {
-//         alert("Congratulations!! You win.");
-//     } else if (totalPlayerScore < totalComputerScore) {
-//         alert("Computer Wins!! You lose.");
-//     } else {
-//         alert("It's a Tie!! Play again.");
-//     })
-// }
+
+
+    
 
 
 
@@ -179,10 +280,7 @@ array[2].addEventListener("click", () => {
 //Rules Popup.
 // alert("Rules: \n\n 1. Before beginning this game press f12 to open console.\n 2. There are 5 rounds in this game. \n 3. If you win a round, you gain 2 points. \n 4. If you lose a round, you gain 0 points. \n 5. If there is a tie, you gain 1 points. \n 6. If you don't enter anything, you lose that round. \n 7. In order to win this game, your score in the final round must be\n      more than final round score of computer. \n 8. Press f5 to reset the game.");
 
-//Ensures 5 rounds of game.
-// for (let i =0; i = 10; i++) {
-//     // console.log("\n");
-// }
+
 
 
 
