@@ -1,4 +1,5 @@
-#container{
+body{
+    background: url(bacground-image.png);
 }
 
 #rock{
@@ -31,3 +32,4 @@
     display: flex;
     min-width: 60px;
 }
+

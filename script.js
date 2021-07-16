@@ -18,8 +18,8 @@ const container = document.querySelector("#container");
 
 const array = Array.from(container.querySelectorAll("button"));
 
-const reset=document.querySelector("#reset");
-reset.addEventListener("click", ()=>{
+const reset = document.querySelector("#reset");
+reset.addEventListener("click", () => {
     window.location.reload(true);
 })
 
@@ -32,7 +32,9 @@ function game() {
                 totalPlayerScore = playerScore + totalPlayerScore;
                 totalComputerScore = computerScore + totalComputerScore;
                 x = totalPlayerScore + totalComputerScore;
-                alert("You: " + "rock!" + "\n" + "Computer: " + computerSelection + "!" + "\n" + "It's a Tie!" + "\n" + "You: " + totalPlayerScore + " Computer: " + totalComputerScore + " r: " + x);
+                document.getElementById("you").innerHTML = "You: " + totalPlayerScore;
+                document.getElementById("computer").innerHTML = "Computer: " + totalComputerScore;
+                document.getElementById("roundResult").innerHTML = "It's a Tie!";
                 if (x >= 10) {
                     array[0].disabled = true;
                     array[1].disabled = true;
@@ -55,7 +57,9 @@ function game() {
                 totalPlayerScore = playerScore + totalPlayerScore;
                 totalComputerScore = computerScore + totalComputerScore;
                 x = totalPlayerScore + totalComputerScore;
-                alert("You: " + "rock!" + "\n" + "Computer: " + computerSelection + "!" + "\n" + "You lose! Paper wraps Rock!" + "\n" + "You: " + totalPlayerScore + " Computer: " + totalComputerScore + " r: " + x);
+                document.getElementById("you").innerHTML = "You: " + totalPlayerScore;
+                document.getElementById("computer").innerHTML = "Computer: " + totalComputerScore;
+                document.getElementById("roundResult").innerHTML = "You lose! Paper wraps Rock!";
                 if (x >= 10) {
                     array[0].disabled = true;
                     array[1].disabled = true;
@@ -78,7 +82,9 @@ function game() {
                 totalPlayerScore = playerScore + totalPlayerScore;
                 totalComputerScore = computerScore + totalComputerScore;
                 x = totalPlayerScore + totalComputerScore;
-                alert("You: " + "rock!" + "\n" + "Computer: " + computerSelection + "!" + "\n" + "You win! Rock crushes Scissors!" + "\n" + "You: " + totalPlayerScore + " Computer: " + totalComputerScore + " r: " + x);
+                document.getElementById("you").innerHTML = "You: " + totalPlayerScore;
+                document.getElementById("computer").innerHTML = "Computer: " + totalComputerScore;
+                document.getElementById("roundResult").innerHTML = "You win! Rock crushes Scissors!";
                 if (x >= 10) {
                     array[0].disabled = true;
                     array[1].disabled = true;
@@ -109,7 +115,9 @@ function game() {
                 totalPlayerScore = playerScore + totalPlayerScore;
                 totalComputerScore = computerScore + totalComputerScore;
                 x = totalPlayerScore + totalComputerScore;
-                alert("You: " + "paper!" + "\n" + "Computer: " + computerSelection + "!" + "\n" + "It's a Tie!" + "\n" + "You: " + totalPlayerScore + " Computer: " + totalComputerScore + " r: " + x);
+                document.getElementById("you").innerHTML = "You: " + totalPlayerScore;
+                document.getElementById("computer").innerHTML = "Computer: " + totalComputerScore;
+                document.getElementById("roundResult").innerHTML = "It's a Tie!";
                 if (x >= 10) {
                     array[0].disabled = true;
                     array[1].disabled = true;
@@ -132,7 +140,9 @@ function game() {
                 totalPlayerScore = playerScore + totalPlayerScore;
                 totalComputerScore = computerScore + totalComputerScore;
                 x = totalPlayerScore + totalComputerScore;
-                alert("You: " + "paper!" + "\n" + "Computer: " + computerSelection + "!" + "\n" + "You win! Paper wraps Rock!" + "\n" + "You: " + totalPlayerScore + " Computer: " + totalComputerScore + " r: " + x);
+                document.getElementById("you").innerHTML = "You: " + totalPlayerScore;
+                document.getElementById("computer").innerHTML = "Computer: " + totalComputerScore;
+                document.getElementById("roundResult").innerHTML = "You win! Paper wraps Rock!";
                 if (x >= 10) {
                     array[0].disabled = true;
                     array[1].disabled = true;
@@ -155,7 +165,9 @@ function game() {
                 totalPlayerScore = playerScore + totalPlayerScore;
                 totalComputerScore = computerScore + totalComputerScore;
                 x = totalPlayerScore + totalComputerScore;
-                alert("You: " + "paper!" + "\n" + "Computer: " + computerSelection + "!" + "\n" + "You lose! Scissors cuts Paper!" + "\n" + "You: " + totalPlayerScore + " Computer: " + totalComputerScore + " r: " + x);
+                document.getElementById("you").innerHTML = "You: " + totalPlayerScore;
+                document.getElementById("computer").innerHTML = "Computer: " + totalComputerScore;
+                document.getElementById("roundResult").innerHTML = "You lose! Scissors cuts Paper!";
                 if (x >= 10) {
                     array[0].disabled = true;
                     array[1].disabled = true;
@@ -171,7 +183,7 @@ function game() {
                     array[0].disabled = false;
                     array[1].disabled = false;
                     array[2].disabled = false;
-                }               
+                }
                 break;
         }
     }
@@ -185,7 +197,9 @@ function game() {
                 totalPlayerScore = playerScore + totalPlayerScore;
                 totalComputerScore = computerScore + totalComputerScore;
                 x = totalPlayerScore + totalComputerScore;
-                alert("You: " + "scissors!" + "\n" + "Computer: " + computerSelection + "!" + "\n" + "It's a Tie!" + "\n" + "You: " + totalPlayerScore + " Computer: " + totalComputerScore + " r: " + x);
+                document.getElementById("you").innerHTML = "You: " + totalPlayerScore;
+                document.getElementById("computer").innerHTML = "Computer: " + totalComputerScore;
+                document.getElementById("roundResult").innerHTML = "It's a Tie!";
                 if (x >= 10) {
                     array[0].disabled = true;
                     array[1].disabled = true;
@@ -208,7 +222,9 @@ function game() {
                 totalPlayerScore = playerScore + totalPlayerScore;
                 totalComputerScore = computerScore + totalComputerScore;
                 x = totalPlayerScore + totalComputerScore;
-                alert("You: " + "scissors!" + "\n" + "Computer: " + computerSelection + "!" + "\n" + "You win! Scissors cuts Paper!" + "\n" + "You: " + totalPlayerScore + " Computer: " + totalComputerScore + " r: " + x);
+                document.getElementById("you").innerHTML = "You: " + totalPlayerScore;
+                document.getElementById("computer").innerHTML = "Computer: " + totalComputerScore;
+                document.getElementById("roundResult").innerHTML = "You win! Scissors cuts Paper!";
                 if (x >= 10) {
                     array[0].disabled = true;
                     array[1].disabled = true;
@@ -231,7 +247,9 @@ function game() {
                 totalPlayerScore = playerScore + totalPlayerScore;
                 totalComputerScore = computerScore + totalComputerScore;
                 x = totalPlayerScore + totalComputerScore;
-                alert("You: " + "scissors!" + "\n" + "Computer: " + computerSelection + "!" + "\n" + "You lose! Rock crushes Scissors!" + "\n" + "You: " + totalPlayerScore + " Computer: " + totalComputerScore + " r: " + x);
+                document.getElementById("you").innerHTML = "You: " + totalPlayerScore;
+                document.getElementById("computer").innerHTML = "Computer: " + totalComputerScore;
+                document.getElementById("roundResult").innerHTML = "You lose! Rock crushes Scissors!";
                 if (x >= 10) {
                     array[0].disabled = true;
                     array[1].disabled = true;
@@ -252,6 +270,7 @@ function game() {
         }
     }
     array[2].addEventListener("click", scissorBtn);
+
 }
 
 game();
