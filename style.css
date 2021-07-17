@@ -1,35 +1,40 @@
-body{
+html{
+
     background: url(bacground-image.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: fit-content;
+    height: 100%;
 }
 
 #rock{
     background-color: red;
     cursor: pointer;
     border-radius: 5px;
-    display: flex;
     min-width: 60px;
+    margin: auto;
 }
 
-#paper{
+#paper {
     background-color: blue;
     cursor: pointer;
     border-radius: 5px;
-    display: flex;
     min-width: 60px;
+    margin: auto;
 }
 
-#scissors{
+#scissors {
     background-color: green;
     cursor: pointer;
     border-radius: 5px;
-    display: flex;
     min-width: 60px;
+    margin: auto;
 }
 
-#reset{
+#reset {
     cursor: pointer;
     border-radius: 5px;
-    display: flex;
     min-width: 60px;
+    margin: auto;  
 }
 
