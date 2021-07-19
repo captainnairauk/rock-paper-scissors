@@ -13,8 +13,9 @@ let computerScore = 0;
 let totalPlayerScore = 0;
 let totalComputerScore = 0;
 let x = 0;
+let round=x/2;
 
-const container = document.querySelector("#container");
+const container = document.querySelector("#buttons-container");
 
 const array = Array.from(container.querySelectorAll("button"));
 
@@ -35,7 +36,7 @@ function game() {
                 document.getElementById("you").innerHTML = "You: " + totalPlayerScore;
                 document.getElementById("computer").innerHTML = "Computer: " + totalComputerScore;
                 document.getElementById("roundResult").innerHTML = "It's a Tie!";
-                if (x >= 10) {
+                if (x>=10){
                     array[0].disabled = true;
                     array[1].disabled = true;
                     array[2].disabled = true;
@@ -46,12 +47,13 @@ function game() {
                     } else {
                         alert("It's a Tie!! Play again.");
                     }
-                } else {
+                } else{
                     array[0].disabled = false;
                     array[1].disabled = false;
                     array[2].disabled = false;
+
                 }
-                break;
+                break; 
             case (computerSelection === "paper"):
                 playerScore = losePoint, computerScore = winPoint;
                 totalPlayerScore = playerScore + totalPlayerScore;
@@ -60,7 +62,7 @@ function game() {
                 document.getElementById("you").innerHTML = "You: " + totalPlayerScore;
                 document.getElementById("computer").innerHTML = "Computer: " + totalComputerScore;
                 document.getElementById("roundResult").innerHTML = "You lose! Paper wraps Rock!";
-                if (x >= 10) {
+                if (x>=10){
                     array[0].disabled = true;
                     array[1].disabled = true;
                     array[2].disabled = true;
@@ -71,10 +73,11 @@ function game() {
                     } else {
                         alert("It's a Tie!! Play again.");
                     }
-                } else {
+                } else{
                     array[0].disabled = false;
                     array[1].disabled = false;
                     array[2].disabled = false;
+
                 }
                 break;
             default:
@@ -85,7 +88,7 @@ function game() {
                 document.getElementById("you").innerHTML = "You: " + totalPlayerScore;
                 document.getElementById("computer").innerHTML = "Computer: " + totalComputerScore;
                 document.getElementById("roundResult").innerHTML = "You win! Rock crushes Scissors!";
-                if (x >= 10) {
+                if (x>=10){
                     array[0].disabled = true;
                     array[1].disabled = true;
                     array[2].disabled = true;
@@ -96,12 +99,13 @@ function game() {
                     } else {
                         alert("It's a Tie!! Play again.");
                     }
-                } else {
+                } else{
                     array[0].disabled = false;
                     array[1].disabled = false;
                     array[2].disabled = false;
+
                 }
-                break;
+                break; 
         }
 
     }
@@ -118,7 +122,7 @@ function game() {
                 document.getElementById("you").innerHTML = "You: " + totalPlayerScore;
                 document.getElementById("computer").innerHTML = "Computer: " + totalComputerScore;
                 document.getElementById("roundResult").innerHTML = "It's a Tie!";
-                if (x >= 10) {
+                if (x>=10){
                     array[0].disabled = true;
                     array[1].disabled = true;
                     array[2].disabled = true;
@@ -129,10 +133,11 @@ function game() {
                     } else {
                         alert("It's a Tie!! Play again.");
                     }
-                } else {
+                } else{
                     array[0].disabled = false;
                     array[1].disabled = false;
                     array[2].disabled = false;
+
                 }
                 break;
             case (computerSelection === "rock"):
@@ -143,7 +148,7 @@ function game() {
                 document.getElementById("you").innerHTML = "You: " + totalPlayerScore;
                 document.getElementById("computer").innerHTML = "Computer: " + totalComputerScore;
                 document.getElementById("roundResult").innerHTML = "You win! Paper wraps Rock!";
-                if (x >= 10) {
+                if (x>=10){
                     array[0].disabled = true;
                     array[1].disabled = true;
                     array[2].disabled = true;
@@ -154,10 +159,11 @@ function game() {
                     } else {
                         alert("It's a Tie!! Play again.");
                     }
-                } else {
+                } else{
                     array[0].disabled = false;
                     array[1].disabled = false;
                     array[2].disabled = false;
+
                 }
                 break;
             default:
@@ -168,7 +174,7 @@ function game() {
                 document.getElementById("you").innerHTML = "You: " + totalPlayerScore;
                 document.getElementById("computer").innerHTML = "Computer: " + totalComputerScore;
                 document.getElementById("roundResult").innerHTML = "You lose! Scissors cuts Paper!";
-                if (x >= 10) {
+                if (x>=10){
                     array[0].disabled = true;
                     array[1].disabled = true;
                     array[2].disabled = true;
@@ -179,10 +185,11 @@ function game() {
                     } else {
                         alert("It's a Tie!! Play again.");
                     }
-                } else {
+                } else{
                     array[0].disabled = false;
                     array[1].disabled = false;
                     array[2].disabled = false;
+
                 }
                 break;
         }
@@ -200,7 +207,7 @@ function game() {
                 document.getElementById("you").innerHTML = "You: " + totalPlayerScore;
                 document.getElementById("computer").innerHTML = "Computer: " + totalComputerScore;
                 document.getElementById("roundResult").innerHTML = "It's a Tie!";
-                if (x >= 10) {
+                if (x>=10){
                     array[0].disabled = true;
                     array[1].disabled = true;
                     array[2].disabled = true;
@@ -211,10 +218,11 @@ function game() {
                     } else {
                         alert("It's a Tie!! Play again.");
                     }
-                } else {
+                } else{
                     array[0].disabled = false;
                     array[1].disabled = false;
                     array[2].disabled = false;
+
                 }
                 break;
             case (computerSelection === "paper"):
@@ -225,7 +233,7 @@ function game() {
                 document.getElementById("you").innerHTML = "You: " + totalPlayerScore;
                 document.getElementById("computer").innerHTML = "Computer: " + totalComputerScore;
                 document.getElementById("roundResult").innerHTML = "You win! Scissors cuts Paper!";
-                if (x >= 10) {
+                if (x>=10){
                     array[0].disabled = true;
                     array[1].disabled = true;
                     array[2].disabled = true;
@@ -236,10 +244,11 @@ function game() {
                     } else {
                         alert("It's a Tie!! Play again.");
                     }
-                } else {
+                } else{
                     array[0].disabled = false;
                     array[1].disabled = false;
                     array[2].disabled = false;
+
                 }
                 break;
             default:
@@ -250,7 +259,7 @@ function game() {
                 document.getElementById("you").innerHTML = "You: " + totalPlayerScore;
                 document.getElementById("computer").innerHTML = "Computer: " + totalComputerScore;
                 document.getElementById("roundResult").innerHTML = "You lose! Rock crushes Scissors!";
-                if (x >= 10) {
+                if (x>=10){
                     array[0].disabled = true;
                     array[1].disabled = true;
                     array[2].disabled = true;
@@ -261,12 +270,13 @@ function game() {
                     } else {
                         alert("It's a Tie!! Play again.");
                     }
-                } else {
+                } else{
                     array[0].disabled = false;
                     array[1].disabled = false;
                     array[2].disabled = false;
+
                 }
-                break;
+                break; 
         }
     }
     array[2].addEventListener("click", scissorBtn);
@@ -277,7 +287,7 @@ game();
 
 
 //Rules Popup.
-// alert("Rules: \n\n 1. Before beginning this game press f12 to open console.\n 2. There are 5 rounds in this game. \n 3. If you win a round, you gain 2 points. \n 4. If you lose a round, you gain 0 points. \n 5. If there is a tie, you gain 1 points. \n 6. If you don't enter anything, you lose that round. \n 7. In order to win this game, your score in the final round must be\n      more than final round score of computer. \n 8. Press f5 to reset the game.");
+alert("Rules: \n 1. There are 5 rounds in this game. \n 2. Every click represents a Round. \n 3. If you win a round, you gain 2 points. \n 4. If you lose a round, you gain 0 points. \n 5. If there is a tie, you gain 1 point. \n 6. In order to win this game, your score in the final round must be\n      more than final round score of computer. \n 7. Press 'reset' to reset the game.");
 
 
 

@@ -1,40 +1,36 @@
 html{
-
-    background: url(bacground-image.png);
+    background: url("bacground-image.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     width: fit-content;
     height: 100%;
 }
 
-#rock{
-    background-color: red;
-    cursor: pointer;
-    border-radius: 5px;
-    min-width: 60px;
-    margin: auto;
+#buttons-container{
+    height:100%;
+    top:550px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-around;
+    position: relative;
+    bottom: 10px;
 }
 
-#paper {
-    background-color: blue;
-    cursor: pointer;
-    border-radius: 5px;
-    min-width: 60px;
-    margin: auto;
+#reset{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: flex-end;
+    position: relative;
+    bottom: 0px;
+
 }
 
-#scissors {
-    background-color: green;
+.button{
     cursor: pointer;
+    background-color: azure;
     border-radius: 5px;
     min-width: 60px;
-    margin: auto;
-}
-
-#reset {
-    cursor: pointer;
-    border-radius: 5px;
-    min-width: 60px;
-    margin: auto;  
 }
 
