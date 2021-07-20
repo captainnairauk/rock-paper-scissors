@@ -13,7 +13,7 @@ let computerScore = 0;
 let totalPlayerScore = 0;
 let totalComputerScore = 0;
 let x = 0;
-let round=x/2;
+let round = x / 2;
 
 const container = document.querySelector("#buttons-container");
 
@@ -36,7 +36,7 @@ function game() {
                 document.getElementById("you").innerHTML = "You: " + totalPlayerScore;
                 document.getElementById("computer").innerHTML = "Computer: " + totalComputerScore;
                 document.getElementById("roundResult").innerHTML = "It's a Tie!";
-                if (x>=10){
+                if (x >= 10) {
                     array[0].disabled = true;
                     array[1].disabled = true;
                     array[2].disabled = true;
@@ -47,13 +47,13 @@ function game() {
                     } else {
                         alert("It's a Tie!! Play again.");
                     }
-                } else{
+                } else {
                     array[0].disabled = false;
                     array[1].disabled = false;
                     array[2].disabled = false;
 
                 }
-                break; 
+                break;
             case (computerSelection === "paper"):
                 playerScore = losePoint, computerScore = winPoint;
                 totalPlayerScore = playerScore + totalPlayerScore;
@@ -62,7 +62,7 @@ function game() {
                 document.getElementById("you").innerHTML = "You: " + totalPlayerScore;
                 document.getElementById("computer").innerHTML = "Computer: " + totalComputerScore;
                 document.getElementById("roundResult").innerHTML = "You lose! Paper wraps Rock!";
-                if (x>=10){
+                if (x >= 10) {
                     array[0].disabled = true;
                     array[1].disabled = true;
                     array[2].disabled = true;
@@ -73,7 +73,7 @@ function game() {
                     } else {
                         alert("It's a Tie!! Play again.");
                     }
-                } else{
+                } else {
                     array[0].disabled = false;
                     array[1].disabled = false;
                     array[2].disabled = false;
@@ -88,7 +88,7 @@ function game() {
                 document.getElementById("you").innerHTML = "You: " + totalPlayerScore;
                 document.getElementById("computer").innerHTML = "Computer: " + totalComputerScore;
                 document.getElementById("roundResult").innerHTML = "You win! Rock crushes Scissors!";
-                if (x>=10){
+                if (x >= 10) {
                     array[0].disabled = true;
                     array[1].disabled = true;
                     array[2].disabled = true;
@@ -99,13 +99,13 @@ function game() {
                     } else {
                         alert("It's a Tie!! Play again.");
                     }
-                } else{
+                } else {
                     array[0].disabled = false;
                     array[1].disabled = false;
                     array[2].disabled = false;
 
                 }
-                break; 
+                break;
         }
 
     }
@@ -122,7 +122,7 @@ function game() {
                 document.getElementById("you").innerHTML = "You: " + totalPlayerScore;
                 document.getElementById("computer").innerHTML = "Computer: " + totalComputerScore;
                 document.getElementById("roundResult").innerHTML = "It's a Tie!";
-                if (x>=10){
+                if (x >= 10) {
                     array[0].disabled = true;
                     array[1].disabled = true;
                     array[2].disabled = true;
@@ -133,7 +133,7 @@ function game() {
                     } else {
                         alert("It's a Tie!! Play again.");
                     }
-                } else{
+                } else {
                     array[0].disabled = false;
                     array[1].disabled = false;
                     array[2].disabled = false;
@@ -148,7 +148,7 @@ function game() {
                 document.getElementById("you").innerHTML = "You: " + totalPlayerScore;
                 document.getElementById("computer").innerHTML = "Computer: " + totalComputerScore;
                 document.getElementById("roundResult").innerHTML = "You win! Paper wraps Rock!";
-                if (x>=10){
+                if (x >= 10) {
                     array[0].disabled = true;
                     array[1].disabled = true;
                     array[2].disabled = true;
@@ -159,7 +159,7 @@ function game() {
                     } else {
                         alert("It's a Tie!! Play again.");
                     }
-                } else{
+                } else {
                     array[0].disabled = false;
                     array[1].disabled = false;
                     array[2].disabled = false;
@@ -174,7 +174,7 @@ function game() {
                 document.getElementById("you").innerHTML = "You: " + totalPlayerScore;
                 document.getElementById("computer").innerHTML = "Computer: " + totalComputerScore;
                 document.getElementById("roundResult").innerHTML = "You lose! Scissors cuts Paper!";
-                if (x>=10){
+                if (x >= 10) {
                     array[0].disabled = true;
                     array[1].disabled = true;
                     array[2].disabled = true;
@@ -185,7 +185,7 @@ function game() {
                     } else {
                         alert("It's a Tie!! Play again.");
                     }
-                } else{
+                } else {
                     array[0].disabled = false;
                     array[1].disabled = false;
                     array[2].disabled = false;
@@ -207,7 +207,7 @@ function game() {
                 document.getElementById("you").innerHTML = "You: " + totalPlayerScore;
                 document.getElementById("computer").innerHTML = "Computer: " + totalComputerScore;
                 document.getElementById("roundResult").innerHTML = "It's a Tie!";
-                if (x>=10){
+                if (x >= 10) {
                     array[0].disabled = true;
                     array[1].disabled = true;
                     array[2].disabled = true;
@@ -218,7 +218,7 @@ function game() {
                     } else {
                         alert("It's a Tie!! Play again.");
                     }
-                } else{
+                } else {
                     array[0].disabled = false;
                     array[1].disabled = false;
                     array[2].disabled = false;
@@ -233,7 +233,7 @@ function game() {
                 document.getElementById("you").innerHTML = "You: " + totalPlayerScore;
                 document.getElementById("computer").innerHTML = "Computer: " + totalComputerScore;
                 document.getElementById("roundResult").innerHTML = "You win! Scissors cuts Paper!";
-                if (x>=10){
+                if (x >= 10) {
                     array[0].disabled = true;
                     array[1].disabled = true;
                     array[2].disabled = true;
@@ -244,7 +244,7 @@ function game() {
                     } else {
                         alert("It's a Tie!! Play again.");
                     }
-                } else{
+                } else {
                     array[0].disabled = false;
                     array[1].disabled = false;
                     array[2].disabled = false;
@@ -259,7 +259,7 @@ function game() {
                 document.getElementById("you").innerHTML = "You: " + totalPlayerScore;
                 document.getElementById("computer").innerHTML = "Computer: " + totalComputerScore;
                 document.getElementById("roundResult").innerHTML = "You lose! Rock crushes Scissors!";
-                if (x>=10){
+                if (x >= 10) {
                     array[0].disabled = true;
                     array[1].disabled = true;
                     array[2].disabled = true;
@@ -270,13 +270,13 @@ function game() {
                     } else {
                         alert("It's a Tie!! Play again.");
                     }
-                } else{
+                } else {
                     array[0].disabled = false;
                     array[1].disabled = false;
                     array[2].disabled = false;
 
                 }
-                break; 
+                break;
         }
     }
     array[2].addEventListener("click", scissorBtn);
