@@ -13,7 +13,6 @@ let computerScore = 0;
 let totalPlayerScore = 0;
 let totalComputerScore = 0;
 let x = 0;
-let round = x / 2;
 
 const container = document.querySelector("#buttons-container");
 
