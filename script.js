@@ -66,9 +66,42 @@ function capitalize(word) {
   return word.charAt(0).toUpperCase() + word.slice(1);
 }
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
+function playGame() {
+  let round = 0;
+  console.log("Welcome to Rock-Paper-Scissors! Best of 5 rounds!");
 
-playRound(humanSelection, computerSelection);
-// console.log(getHumanChoice());
-// console.log(getComputerChoice());
+  while (round < 5) {
+    console.log(`\nRound ${round + 1}:`);
+    const humanSelection = getHumanChoice();
+    const computerSelection = getComputerChoice();
+
+    playRound(humanSelection, computerSelection);
+
+    if (
+      (humanSelection === "rock" && computerSelection === "scissors") ||
+      (humanSelection === "paper" && computerSelection === "rock") ||
+      (humanSelection === "scissors" && computerSelection === "paper")
+    ) {
+      humanScore++;
+    } else if (
+      (computerSelection === "rock" && humanSelection === "scissors") ||
+      (computerSelection === "paper" && humanSelection === "rock") ||
+      (computerSelection === "scissors" && humanSelection === "paper")
+    ) {
+      computerScore++;
+    }
+    round++;
+  }
+
+  console.log("\nGame Over!");
+  console.log(`Final Scores: You: ${humanScore}, Computer: ${computerScore}`);
+  if (humanScore > computerScore) {
+    console.log("Congratulations! You won the game!");
+  } else if (computerScore > humanScore) {
+    console.log("You lost! The computer won the game!");
+  } else {
+    console.log("It's a draw! No one wins.");
+  }
+}
+
+playGame();
